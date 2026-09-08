@@ -473,6 +473,17 @@ summary:hover{color:var(--o-hi)}
   background-image:linear-gradient(142deg,var(--plate-a) 0%,var(--o) 58%,var(--plate) 100%);
 }
 
+/* ---------- avatar plate: deep Mantle forest ---------- */
+.brand img,.node img{background-image:none;background-color:var(--avatar)}
+
+/* ---------- X icon: optical size match with the mask icons ---------- */
+.icon-btn > svg{width:19px;height:19px}
+/* the mobile @media enlarges .m-dex/.m-sushi/.m-oku for the big logo row,
+   which also hit the small footer/nav buttons - pin those back down */
+.icon-btn .m-dex{width:17px;height:20px}
+.icon-btn .m-sushi{width:20px;height:19px}
+.icon-btn .m-oku{width:20px;height:19px}
+
 </style>
 </head>
 <body>
@@ -750,6 +761,7 @@ summary:hover{color:var(--o-hi)}
     '--plate'    : [[252,147,40,1],   [0,183,105,1]],
     '--plate-a'  : [[252,147,40,1],   [140,255,211,1]],
     '--plate-b'  : [[252,147,40,1],   [0,160,92,1]],
+    '--avatar'   : [[252,147,40,1],   [5,117,70,1]],
     '--ink'      : [[23,24,30,1],     [4,15,11,1]],
     '--ink-2'    : [[16,17,22,1],     [2,9,6,1]],
     '--cream'    : [[239,233,222,1],  [255,255,255,1]],
