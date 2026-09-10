@@ -484,6 +484,52 @@ summary:hover{color:var(--o-hi)}
 .icon-btn .m-sushi{width:20px;height:19px}
 .icon-btn .m-oku{width:20px;height:19px}
 
+/* ---------- ticker: Bybit x Mantle strip ---------- */
+.ticker{
+  background-color:var(--ink-2);
+  background-image:linear-gradient(90deg,var(--tick-tint) 0%,transparent 20%,transparent 80%,var(--tick-tint) 100%);
+  color:var(--cream);
+  padding:13px 0;
+  border-top:1px solid var(--tick-line);
+  border-bottom:1px solid var(--tick-line);
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 5%,#000 95%,transparent 100%);
+  mask-image:linear-gradient(90deg,transparent 0,#000 5%,#000 95%,transparent 100%);
+}
+.ticker span{gap:22px;padding-inline:22px;letter-spacing:.01em}
+.ticker span:nth-child(odd){color:var(--o)}
+.ticker span:nth-child(even){color:var(--cream)}
+.ticker span::after{
+  width:5px;height:5px;border-radius:1px;transform:rotate(45deg);
+  background:var(--tick-dot);
+}
+
+/* ---------- CA pill: same Bybit x Mantle strip language ---------- */
+.ca{
+  gap:0;padding:0;overflow:hidden;
+  background-color:var(--ink-2);
+  background-image:linear-gradient(90deg,var(--tick-tint) 0%,transparent 24%,transparent 76%,var(--tick-tint) 100%);
+  border:1px solid var(--tick-line);
+}
+.ca-k{
+  align-self:stretch;display:flex;align-items:center;
+  padding:0 14px;border-radius:0;margin:0;
+  background:var(--plate);color:var(--ink);
+}
+.ca-v{
+  padding:11px 16px;color:var(--cream);letter-spacing:.01em;
+  border-right:1px solid var(--tick-line);
+}
+.ca-copy{
+  align-self:stretch;padding:0 18px;
+  font-size:13.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;
+}
+.ca-copy:hover{background:var(--tick-tint)}
+@media(max-width:620px){
+  .ca-v{padding:10px 12px;letter-spacing:0}
+  .ca-k{padding:0 11px}
+  .ca-copy{padding:0 13px;font-size:12.5px}
+}
+
 </style>
 </head>
 <body>
@@ -527,7 +573,7 @@ summary:hover{color:var(--o-hi)}
 
 <div class="ticker" aria-hidden="true">
   <div class="ticker-track">
-    <span>Billi on Mantle</span><span>Nov 17, 2025 — named by the community</span><span>TradFi × DeFi</span><span>#NewFinancialPlatform</span><span>$BILLI</span><span>Billi on Mantle</span><span>Nov 17, 2025 — named by the community</span><span>TradFi × DeFi</span><span>#NewFinancialPlatform</span><span>$BILLI</span>
+    <span>$BILLI</span><span>Billi on Mantle</span><span>#NewFinancialPlatform</span><span>Bybit × Mantle</span><span>TradFi × DeFi</span><span>24/7 borderless</span><span>$BILLI</span><span>Billi on Mantle</span><span>#NewFinancialPlatform</span><span>Bybit × Mantle</span><span>TradFi × DeFi</span><span>24/7 borderless</span>
   </div>
 </div>
 
@@ -762,6 +808,9 @@ summary:hover{color:var(--o-hi)}
     '--plate-a'  : [[252,147,40,1],   [140,255,211,1]],
     '--plate-b'  : [[252,147,40,1],   [0,160,92,1]],
     '--avatar'   : [[252,147,40,1],   [5,117,70,1]],
+    '--tick-line': [[252,147,40,.32],  [0,255,147,.28]],
+    '--tick-tint': [[252,147,40,.14],  [0,255,147,.11]],
+    '--tick-dot' : [[252,147,40,.6],   [0,255,147,.55]],
     '--ink'      : [[23,24,30,1],     [4,15,11,1]],
     '--ink-2'    : [[16,17,22,1],     [2,9,6,1]],
     '--cream'    : [[239,233,222,1],  [255,255,255,1]],
