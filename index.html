@@ -10,6 +10,9 @@
 <meta property="og:description" content="Named by the Bybit community on November 17, 2025. The mascot of #NewFinancialPlatform, on Mantle Chain.">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..900&display=swap">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.1/packages/wanted-sans/fonts/webfonts/variable/split/WantedSansVariable.min.css">
@@ -25,7 +28,7 @@
   --muted:#A29C93;
   --dim:#7A756D;
   --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;
-  --en:"Pretendard Variable",Pretendard,"Wanted Sans Variable","Wanted Sans",-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
+  --en:"Inter","Inter Variable","Pretendard Variable",Pretendard,"Wanted Sans Variable","Wanted Sans",-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -529,6 +532,19 @@ summary:hover{color:var(--o-hi)}
   .ca-k{padding:0 11px}
   .ca-copy{padding:0 13px;font-size:12.5px}
 }
+
+/* ---------- Bybit-style typography ---------- */
+body{
+  font-family:var(--en);
+  font-optical-sizing:auto;
+  font-feature-settings:"cv05" 1,"ss01" 1;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+h1,h2,h3,.nav-cta,.ca-k,.ca-copy,.ticker span,.row-v,.stat-v{
+  font-feature-settings:"cv05" 1,"ss01" 1,"tnum" 0;
+}
+.row-v,.ca-v,.stat-v{font-variant-numeric:tabular-nums}
 
 </style>
 </head>
